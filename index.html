@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RE:BORN COFFEE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    /* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+body {
+  margin: 0;
+  background: #f7f4eb;
+  color: #3a3a3a;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.header {
+  background: white;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #67754e;
+  text-transform: uppercase;
+}
+.logo img {
+  width: 36px;
+  height: 36px;
+}
+.nav-menu a {
+  margin: 0 15px;
+  color: #67754e;
+  text-decoration: none;
+  font-weight: 600;
+}
+.nav-menu a:hover {
+  color: #a9b399;
+}
+.nav-icons button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+  position: relative;
+}
+.cart-count {
+  background: #a9b399;
+  color: white;
+  font-size: 0.7rem;
+  border-radius: 50%;
+  padding: 2px 6px;
+  position: absolute;
+  top: -8px;
+  right: -10px;
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px 0;
+  gap: 40px;
+}
+.hero-text {
+  flex: 1;
+}
+.subtitle {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #84897e;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+h1 {
+  font-size: 3rem;
+  margin: 0 0 15px;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+}
+.highlight {
+  color: #67754e;
+}
+.hero-text p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  max-width: 430px;
+  margin-bottom: 25px;
+  color: #4c4c4c;
+}
+.hero-buttons button {
+  font-size: 1rem;
+  padding: 12px 25px;
+  border-radius: 50px;
+  border: 2px solid #67754e;
+  margin-right: 15px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.btn-primary {
+  background: #67754e;
+  color: white;
+  border-color: #67754e;
+}
+.btn-primary:hover {
+  background: #a9b399;
+  border-color: #a9b399;
+}
+.btn-secondary {
+  background: transparent;
+  color: #67754e;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.btn-secondary:hover {
+  background: #eae9e1;
+}
+.hero-image img {
+  max-width: 350px;
+  border-radius: 12px;
+  box-shadow: 0 8px 12px rgb(0 0 0 / 0.1);
+}
+
+/* Features Section */
+.features {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 0 60px;
+  gap: 15px;
+  text-align: center;
+  color: #67754e;
+}
+.feature h4 {
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+.feature p {
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+/* Products Section */
+.products h2 {
+  text-align: center;
+  font-weight: 900;
+  font-size: 1.6rem;
+  color: #67754e;
+  margin-bottom: 8px;
+  letter-spacing: 0.05em;
+}
+.products h3 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #454545;
+  margin-bottom: 30px;
+}
+.product-list {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.product-card {
+  background: white;
+  width: 220px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgb(0 0 0 /0.07);
+  padding: 15px;
+  text-align: center;
+}
+.product-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+.product-name {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 6px;
+  color: #333;
+  text-transform: uppercase;
+}
+.product-price {
+  font-weight: 700;
+  color: #67754e;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+.btn-cart {
+  background: transparent;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: #67754e;
+  transition: color 0.2s ease;
+}
+.btn-cart:hover {
+  color: #a9b399;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-image img {
+    max-width: 80vw;
+  }
+  .features {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .product-list {
+    justify-content: center;
+  }
+}* CSS sẽ được thêm bên dưới */
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="logo-placeholder.png" alt="RE:BORN COFFEE" />
+        <span>RE:BORN COFFEE</span>
+      </div>
+      <nav class="nav-menu">
+        <a href="#">TRANG CHỦ</a>
+        <a href="#">GIỚI THIỆU</a>
+        <a href="#">SẢN PHẨM</a>
+        <a href="#">BLOG</a>
+        <a href="#">LIÊN HỆ</a>
+      </nav>
+      <div class="nav-icons">
+        <button aria-label="Search">
+          🔍
+        </button>
+        <button aria-label="Cart">
+          🛒<span class="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero container">
+    <div class="hero-text">
+      <p class="subtitle"><span>🌿</span> TÁI SINH TỪ NHỮNG ĐIỀU BỊ BỎ QUÊN</p>
+      <h1>RE:BORN <span class="highlight">COFFEE</span></h1>
+      <p>Chúng tôi tin rằng mỗi vật liệu cũ đều có thể được tái sinh và tạo ra giá trị mới cho cuộc sống.</p>
+      <div class="hero-buttons">
+        <button class="btn-primary">KHÁM PHÁ NGAY</button>
+        <button class="btn-secondary">
+          ▶ XEM VIDEO
+        </button>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="coffee-cup.jpg" alt="Ly cà phê tái chế" />
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features container">
+    <div class="feature">
+      <h4>♻️ TÁI CHẾ SÁNG TẠO</h4>
+      <p>Biến vật liệu cũ thành sản phẩm mới đầy giá trị.</p>
+    </div>
+    <div class="feature">
+      <h4>🌱 THÂN THIỆN MÔI TRƯỜNG</h4>
+      <p>Hạn chế rác thải, giảm thiểu tác động đến hành tinh.</p>
+    </div>
+    <div class="feature">
+      <h4>☕ CHẤT LƯỢNG BỀN VỮNG</h4>
+      <p>Sản phẩm chất lượng, bền đẹp và an toàn cho người dùng.</p>
+    </div>
+    <div class="feature">
+      <h4>💚 TRUYỀN CẢM HỨNG</h4>
+      <p>Lan tỏa lối sống xanh và ý thức tiêu dùng bền vững.</p>
+    </div>
+  </section>
+
+  <!-- Featured Products -->
+  <section class="products container">
+    <h2>SẢN PHẨM NỔI BẬT</h2>
+    <h3>SẢN PHẨM TỪ TÁI CHẾ</h3>
+    <div class="product-list">
+      <div class="product-card">
+        <img src="coffee-cup-product.jpg" alt="Cốc cà phê tái chế" />
+        <p class="product-name">CỐC CÀ PHÊ TÁI CHẾ</p>
+        <p class="product-price">129.000₫</p>
+        <button class="btn-cart" aria-label="Thêm Cốc cà phê tái chế vào giỏ hàng">🛒</button>
+      </div>
+      <div class="product-card">
+        <img src="tote-bag.jpg" alt="Túi vải tái chế" />
+        <p class="product-name">TÚI VẢI TÁI CHẾ</p>
+        <p class="product-price">159.000₫</p>
+        <button class="btn-cart" aria-label="Thêm Túi vải tái chế vào giỏ hàng">🛒</button>
+      </div>
+      <div class="product-card">
+        <img src="wood-decor.jpg" alt="Decor gỗ tái chế" />
+        <p class="product-name">DECOR GỖ TÁI CHẾ</p>
+        <p class="product-price">199.000₫</p>
+        <button class="btn-cart" aria-label="Thêm Decor gỗ tái chế vào giỏ hàng">🛒</button>
+      </div>
+      <div class="product-card">
+        <img src="coffee-soap.jpg" alt="Xà phòng bã cà phê" />
+        <p class="product-name">XÀ PHÒNG BÃ CÀ PHÊ</p>
+        <p class="product-price">89.000₫</p>
+        <button class="btn-cart" aria-label="Thêm Xà phòng bã cà phê vào giỏ hàng">🛒</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (nếu cần) -->
+
+</body>
+</html>
