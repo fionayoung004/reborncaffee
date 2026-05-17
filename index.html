@@ -1,346 +1,507 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>RE:BORN COFFEE</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
   <style>
-    /* {
-  box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
-}
-body {
-  margin: 0;
-  background: #f7f4eb;
-  color: #3a3a3a;
-}
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
 
-/* Header */
-.header {
-  background: white;
-  box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-.header .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 60px;
-}
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-weight: 700;
-  font-size: 1.1rem;
-  color: #67754e;
-  text-transform: uppercase;
-}
-.logo img {
-  width: 36px;
-  height: 36px;
-}
-.nav-menu a {
-  margin: 0 15px;
-  color: #67754e;
-  text-decoration: none;
-  font-weight: 600;
-}
-.nav-menu a:hover {
-  color: #a9b399;
-}
-.nav-icons button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 1.3rem;
-  position: relative;
-}
-.cart-count {
-  background: #a9b399;
-  color: white;
-  font-size: 0.7rem;
-  border-radius: 50%;
-  padding: 2px 6px;
-  position: absolute;
-  top: -8px;
-  right: -10px;
-}
+    body {
+      background: #f5f1e8;
+      color: #1e1e1e;
+    }
 
-/* Hero */
-.hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 40px 0;
-  gap: 40px;
-}
-.hero-text {
-  flex: 1;
-}
-.subtitle {
-  font-weight: 600;
-  font-size: 0.9rem;
-  color: #84897e;
-  margin-bottom: 8px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-h1 {
-  font-size: 3rem;
-  margin: 0 0 15px;
-  font-weight: 900;
-  letter-spacing: 0.05em;
-}
-.highlight {
-  color: #67754e;
-}
-.hero-text p {
-  font-size: 1.1rem;
-  line-height: 1.5;
-  max-width: 430px;
-  margin-bottom: 25px;
-  color: #4c4c4c;
-}
-.hero-buttons button {
-  font-size: 1rem;
-  padding: 12px 25px;
-  border-radius: 50px;
-  border: 2px solid #67754e;
-  margin-right: 15px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-.btn-primary {
-  background: #67754e;
-  color: white;
-  border-color: #67754e;
-}
-.btn-primary:hover {
-  background: #a9b399;
-  border-color: #a9b399;
-}
-.btn-secondary {
-  background: transparent;
-  color: #67754e;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-.btn-secondary:hover {
-  background: #eae9e1;
-}
-.hero-image img {
-  max-width: 350px;
-  border-radius: 12px;
-  box-shadow: 0 8px 12px rgb(0 0 0 / 0.1);
-}
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-/* Features Section */
-.features {
-  display: flex;
-  justify-content: space-between;
-  margin: 40px 0 60px;
-  gap: 15px;
-  text-align: center;
-  color: #67754e;
-}
-.feature h4 {
-  font-weight: 700;
-  margin-bottom: 10px;
-  font-size: 1rem;
-}
-.feature p {
-  font-weight: 400;
-  font-size: 0.9rem;
-}
+    .container {
+      width: 90%;
+      margin: auto;
+    }
 
-/* Products Section */
-.products h2 {
-  text-align: center;
-  font-weight: 900;
-  font-size: 1.6rem;
-  color: #67754e;
-  margin-bottom: 8px;
-  letter-spacing: 0.05em;
-}
-.products h3 {
-  text-align: center;
-  font-weight: 700;
-  font-size: 1.2rem;
-  color: #454545;
-  margin-bottom: 30px;
-}
-.product-list {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.product-card {
-  background: white;
-  width: 220px;
-  border-radius: 10px;
-  box-shadow: 0 5px 10px rgb(0 0 0 /0.07);
-  padding: 15px;
-  text-align: center;
-}
-.product-card img {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 12px;
-}
-.product-name {
-  font-weight: 700;
-  font-size: 1rem;
-  margin-bottom: 6px;
-  color: #333;
-  text-transform: uppercase;
-}
-.product-price {
-  font-weight: 700;
-  color: #67754e;
-  font-size: 1rem;
-  margin-bottom: 10px;
-}
-.btn-cart {
-  background: transparent;
-  border: none;
-  font-size: 1.4rem;
-  cursor: pointer;
-  color: #67754e;
-  transition: color 0.2s ease;
-}
-.btn-cart:hover {
-  color: #a9b399;
-}
+    /* NAVBAR */
 
-/* Responsive */
-@media (max-width: 900px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-  .hero-image img {
-    max-width: 80vw;
-  }
-  .features {
-    flex-direction: column;
-    gap: 30px;
-  }
-  .product-list {
-    justify-content: center;
-  }
-}* CSS sẽ được thêm bên dưới */
+    nav {
+      background: white;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+      color: #5E7C60;
+    }
+
+    .menu {
+      display: flex;
+      gap: 30px;
+    }
+
+    .menu a {
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .menu a:hover {
+      color: #5E7C60;
+    }
+
+    /* HERO */
+
+    .hero {
+      height: 90vh;
+      background:
+        linear-gradient(rgba(0, 0, 0, 0.45),
+          rgba(0, 0, 0, 0.45)),
+        url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1974&auto=format&fit=crop');
+
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 700px;
+    }
+
+    .hero h1 {
+      font-size: 70px;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 16px 28px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: #5E7C60;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #476149;
+    }
+
+    .btn-light {
+      background: white;
+      color: #1e1e1e;
+    }
+
+    /* SECTION */
+
+    section {
+      padding: 90px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-title h2 {
+      font-size: 40px;
+      margin-bottom: 10px;
+      color: #5E7C60;
+    }
+
+    .section-title p {
+      color: #666;
+    }
+
+    /* STEPS */
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+    }
+
+    .step-card {
+      background: white;
+      padding: 40px 30px;
+      border-radius: 20px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .step-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .step-icon {
+      font-size: 50px;
+      margin-bottom: 20px;
+    }
+
+    .step-card h3 {
+      margin-bottom: 15px;
+      color: #5E7C60;
+    }
+
+    /* TRANSFORM */
+
+    .transform {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .transform img {
+      width: 100%;
+      border-radius: 20px;
+    }
+
+    .transform-box {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+    }
+
+    .transform-box h3 {
+      font-size: 35px;
+      margin-bottom: 20px;
+      color: #5E7C60;
+    }
+
+    .transform-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .mini-card {
+      background: #f5f1e8;
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    /* WORKSHOP */
+
+    .workshop-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .workshop-card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      transition: 0.3s;
+    }
+
+    .workshop-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .workshop-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .workshop-content {
+      padding: 25px;
+    }
+
+    .workshop-content h3 {
+      margin-bottom: 10px;
+      color: #5E7C60;
+    }
+
+    /* SHOP */
+
+    .shop-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .product {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      transition: 0.3s;
+    }
+
+    .product:hover {
+      transform: scale(1.03);
+    }
+
+    .product img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+    }
+
+    .product-content {
+      padding: 20px;
+    }
+
+    .price {
+      margin-top: 10px;
+      color: #5E7C60;
+      font-weight: 700;
+      font-size: 20px;
+    }
+
+    /* PICKUP */
+
+    .pickup {
+      background: #5E7C60;
+      color: white;
+      border-radius: 30px;
+      padding: 60px;
+      text-align: center;
+    }
+
+    .pickup h2 {
+      font-size: 45px;
+      margin-bottom: 20px;
+    }
+
+    .pickup p {
+      margin-bottom: 30px;
+      font-size: 18px;
+    }
+
+    input {
+      width: 100%;
+      padding: 16px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 10px;
+    }
+
+    .form {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #1e1e1e;
+      color: white;
+      padding: 60px 0;
+      margin-top: 80px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+    }
+
+    footer h3 {
+      margin-bottom: 20px;
+      color: #9dc59f;
+    }
+
+    footer p {
+      color: #ccc;
+      line-height: 1.8;
+    }
+
+    @media(max-width:900px) {
+
+      .hero h1 {
+        font-size: 50px;
+      }
+
+      .transform {
+        grid-template-columns: 1fr;
+      }
+
+    }
   </style>
 </head>
+
 <body>
-  <!-- Header -->
-  <header class="header">
-    <div class="container">
+
+  <!-- NAVBAR -->
+
+  <nav>
+
+    <div class="container nav-wrapper">
+
       <div class="logo">
-        <img src="logo-placeholder.png" alt="RE:BORN COFFEE" />
-        <span>RE:BORN COFFEE</span>
+        RE:BORN
       </div>
-      <nav class="nav-menu">
-        <a href="#">TRANG CHỦ</a>
-        <a href="#">GIỚI THIỆU</a>
-        <a href="#">SẢN PHẨM</a>
-        <a href="#">BLOG</a>
-        <a href="#">LIÊN HỆ</a>
-      </nav>
-      <div class="nav-icons">
-        <button aria-label="Search">
-          🔍
-        </button>
-        <button aria-label="Cart">
-          🛒<span class="cart-count">0</span>
-        </button>
-      </div>
-    </div>
-  </header>
 
-  <!-- Hero Section -->
-  <section class="hero container">
-    <div class="hero-text">
-      <p class="subtitle"><span>🌿</span> TÁI SINH TỪ NHỮNG ĐIỀU BỊ BỎ QUÊN</p>
-      <h1>RE:BORN <span class="highlight">COFFEE</span></h1>
-      <p>Chúng tôi tin rằng mỗi vật liệu cũ đều có thể được tái sinh và tạo ra giá trị mới cho cuộc sống.</p>
-      <div class="hero-buttons">
-        <button class="btn-primary">KHÁM PHÁ NGAY</button>
-        <button class="btn-secondary">
-          ▶ XEM VIDEO
-        </button>
+      <div class="menu">
+        <a href="#">Trang chủ</a>
+        <a href="#">Workshop</a>
+        <a href="#">Thu gom</a>
+        <a href="#">Shop tái chế</a>
+        <a href="#">Blog</a>
+        <a href="#">Liên hệ</a>
       </div>
+
     </div>
-    <div class="hero-image">
-      <img src="coffee-cup.jpg" alt="Ly cà phê tái chế" />
+
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="container">
+
+      <div class="hero-content">
+
+        <h1>
+          TÁI SINH<br>
+          TỪ NHỮNG ĐIỀU BỊ BỎ QUÊN
+        </h1>
+
+        <p>
+          Mang chai nhựa đến cho chúng tôi hoặc đặt lịch
+          thu gom tận nơi để biến chúng thành giá trị mới.
+        </p>
+
+        <div class="buttons">
+
+          <button class="btn btn-primary">
+            ĐẶT WORKSHOP
+          </button>
+
+          <button class="btn btn-light">
+            THU GOM TẬN NƠI
+          </button>
+
+        </div>
+
+      </div>
+
     </div>
+
   </section>
 
-  <!-- Features Section -->
-  <section class="features container">
-    <div class="feature">
-      <h4>♻️ TÁI CHẾ SÁNG TẠO</h4>
-      <p>Biến vật liệu cũ thành sản phẩm mới đầy giá trị.</p>
+  <!-- HOW IT WORKS -->
+
+  <section>
+
+    <div class="container">
+
+      <div class="section-title">
+        <h2>CÁCH HOẠT ĐỘNG</h2>
+        <p>Hành trình tái sinh vật liệu</p>
+      </div>
+
+      <div class="steps">
+
+        <div class="step-card">
+          <div class="step-icon">📅</div>
+          <h3>ĐẶT LỊCH</h3>
+          <p>Đặt workshop hoặc yêu cầu thu gom trên website.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-icon">🛵</div>
+          <h3>THU GOM</h3>
+          <p>Shipper đến lấy chai/lọ tận nơi.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-icon">♻️</div>
+          <h3>TÁI CHẾ</h3>
+          <p>Vật liệu được xử lý và tái sinh.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-icon">🪴</div>
+          <h3>SẢN PHẨM MỚI</h3>
+          <p>Biến thành đồ decor và sản phẩm handmade.</p>
+        </div>
+
+      </div>
+
     </div>
-    <div class="feature">
-      <h4>🌱 THÂN THIỆN MÔI TRƯỜNG</h4>
-      <p>Hạn chế rác thải, giảm thiểu tác động đến hành tinh.</p>
-    </div>
-    <div class="feature">
-      <h4>☕ CHẤT LƯỢNG BỀN VỮNG</h4>
-      <p>Sản phẩm chất lượng, bền đẹp và an toàn cho người dùng.</p>
-    </div>
-    <div class="feature">
-      <h4>💚 TRUYỀN CẢM HỨNG</h4>
-      <p>Lan tỏa lối sống xanh và ý thức tiêu dùng bền vững.</p>
-    </div>
+
   </section>
 
-  <!-- Featured Products -->
-  <section class="products container">
-    <h2>SẢN PHẨM NỔI BẬT</h2>
-    <h3>SẢN PHẨM TỪ TÁI CHẾ</h3>
-    <div class="product-list">
-      <div class="product-card">
-        <img src="coffee-cup-product.jpg" alt="Cốc cà phê tái chế" />
-        <p class="product-name">CỐC CÀ PHÊ TÁI CHẾ</p>
-        <p class="product-price">129.000₫</p>
-        <button class="btn-cart" aria-label="Thêm Cốc cà phê tái chế vào giỏ hàng">🛒</button>
-      </div>
-      <div class="product-card">
-        <img src="tote-bag.jpg" alt="Túi vải tái chế" />
-        <p class="product-name">TÚI VẢI TÁI CHẾ</p>
-        <p class="product-price">159.000₫</p>
-        <button class="btn-cart" aria-label="Thêm Túi vải tái chế vào giỏ hàng">🛒</button>
-      </div>
-      <div class="product-card">
-        <img src="wood-decor.jpg" alt="Decor gỗ tái chế" />
-        <p class="product-name">DECOR GỖ TÁI CHẾ</p>
-        <p class="product-price">199.000₫</p>
-        <button class="btn-cart" aria-label="Thêm Decor gỗ tái chế vào giỏ hàng">🛒</button>
-      </div>
-      <div class="product-card">
-        <img src="coffee-soap.jpg" alt="Xà phòng bã cà phê" />
-        <p class="product-name">XÀ PHÒNG BÃ CÀ PHÊ</p>
-        <p class="product-price">89.000₫</p>
-        <button class="btn-cart" aria-label="Thêm Xà phòng bã cà phê vào giỏ hàng">🛒</button>
-      </div>
-    </div>
-  </section>
+  <!-- TRANSFORM -->
 
-  <!-- Footer (nếu cần) -->
+  <section>
+
+    <div class="container transform">
+
+      <img
+        src="https://images.unsplash.com/photo-1605600659873-d808a13e4d2a?q=80&w=1974&auto=format&fit=crop">
+
+      <div class="transform-box">
+
+        <h3>RÁC CỦA BẠN SẼ THÀNH GÌ?</h3>
+
+        <p>
+          Chúng tôi biến những chai nhựa cũ thành
+          các sản phẩm mới đầy sáng tạo.
+        </p>
+
+        <div class="transform-list">
+
+          <div class="mini-card">🪴 Chậu cây</div>
+          <div class="mini-card">💡 Đèn decor</div>
+          <div class="mini-card">👜 Túi handmade</div>
+          <div class="mini-card">🪑 Nội thất mini</div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
 
 </body>
+
 </html>
