@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>RE:BORN COFFEE</title>
+
+  <!-- FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- ICON -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #edf3ea;
+      color: #1b1b1b;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1400px;
+      margin: auto;
+    }
+
+    /* NAVBAR */
+
+    nav {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 999;
+
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(15px);
+
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+      padding: 20px 0;
+    }
+
+    .nav-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      font-size: 30px;
+      font-weight: 800;
+      color: #5f7d61;
+    }
+
+    .logo-circle {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: #5f7d61;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      color: white;
+      font-size: 18px;
+    }
+
+    .menu {
+      display: flex;
+      gap: 35px;
+    }
+
+    .menu a {
+      font-weight: 600;
+      position: relative;
+      transition: 0.3s;
+    }
+
+    .menu a:hover {
+      color: #5f7d61;
+    }
+
+    /* HERO */
+
+    .hero {
+      height: 100vh;
+
+      background:
+        linear-gradient(rgba(0, 0, 0, 0.55),
+          rgba(0, 0, 0, 0.45)),
+        url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=2070&auto=format&fit=crop');
+
+      background-size: cover;
+      background-position: center;
+
+      display: flex;
+      align-items: center;
+
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+
+      overflow: hidden;
+    }
+
+    .hero-content {
+      max-width: 750px;
+      color: white;
+    }
+
+    .hero-tag {
+      display: inline-block;
+
+      background: rgba(255, 255, 255, 0.15);
+
+      backdrop-filter: blur(10px);
+
+      padding: 10px 20px;
+
+      border-radius: 50px;
+
+      margin-bottom: 25px;
+
+      font-size: 14px;
+      letter-spacing: 2px;
+    }
+
+    .hero h1 {
+      font-size: 90px;
+      line-height: 1.05;
+      margin-bottom: 30px;
+      font-weight: 800;
+    }
+
+    .hero p {
+      font-size: 20px;
+      line-height: 1.8;
+      margin-bottom: 40px;
+      max-width: 650px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 18px 35px;
+      border: none;
+      border-radius: 50px;
+
+      cursor: pointer;
+
+      font-size: 15px;
+      font-weight: 700;
+
+      transition: 0.3s;
+
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-primary {
+      background: #5f7d61;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-5px);
+      background: #486349;
+    }
+
+    .btn-light {
+      background: white;
+      color: #1b1b1b;
+    }
+
+    .btn-light:hover {
+      transform: translateY(-5px);
+    }
+
+    /* SECTION */
+
+    section {
+      padding: 120px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 70px;
+    }
+
+    .section-title span {
+      color: #5f7d61;
+      letter-spacing: 3px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .section-title h2 {
+      font-size: 55px;
+      margin-top: 15px;
+    }
+
+    /* CARDS */
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 35px;
+    }
+
+    .step-card {
+      background: white;
+
+      padding: 50px 35px;
+
+      border-radius: 30px;
+
+      transition: 0.4s;
+
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    }
+
+    .step-card:hover {
+      transform: translateY(-12px);
+    }
+
+    .step-icon {
+      width: 80px;
+      height: 80px;
+
+      border-radius: 20px;
+
+      background: #edf3ea;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 32px;
+      color: #5f7d61;
+
+      margin-bottom: 25px;
+    }
+
+    .step-card h3 {
+      margin-bottom: 15px;
+      font-size: 24px;
+    }
+
+    .step-card p {
+      line-height: 1.8;
+      color: #666;
+    }
+
+    /* TRANSFORM */
+
+    .transform {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .transform img {
+      width: 100%;
+      border-radius: 35px;
+
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .transform-content h2 {
+      font-size: 60px;
+      margin-bottom: 25px;
+    }
+
+    .transform-content p {
+      color: #666;
+      line-height: 1.9;
+      margin-bottom: 35px;
+    }
+
+    .mini-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .mini-card {
+      background: white;
+      padding: 25px;
+      border-radius: 20px;
+
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+
+      font-weight: 600;
+    }
+
+    /* PRODUCTS */
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 35px;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 30px;
+      overflow: hidden;
+
+      transition: 0.4s;
+
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .product-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+    }
+
+    .product-content {
+      padding: 30px;
+    }
+
+    .product-content h3 {
+      margin-bottom: 12px;
+      font-size: 24px;
+    }
+
+    .product-content p {
+      color: #666;
+      line-height: 1.7;
+    }
+
+    .price {
+      margin-top: 20px;
+      font-size: 28px;
+      font-weight: 800;
+      color: #5f7d61;
+    }
+
+    /* CTA */
+
+    .cta {
+      background: #5f7d61;
+      color: white;
+
+      border-radius: 40px;
+
+      padding: 80px;
+
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: 60px;
+      margin-bottom: 20px;
+    }
+
+    .cta p {
+      max-width: 700px;
+      margin: auto;
+      line-height: 1.8;
+      margin-bottom: 40px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #101010;
+      color: white;
+
+      padding: 80px 0;
+      margin-top: 120px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 50px;
+    }
+
+    footer h3 {
+      margin-bottom: 20px;
+      color: #9fc3a1;
+    }
+
+    footer p {
+      color: #bdbdbd;
+      line-height: 1.9;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:1000px) {
+
+      .hero h1 {
+        font-size: 60px;
+      }
+
+      .transform {
+        grid-template-columns: 1fr;
+      }
+
+      .menu {
+        display: none;
+      }
+
+    }
+
+    @media(max-width:700px) {
+
+      .hero h1 {
+        font-size: 45px;
+      }
+
+      .section-title h2 {
+        font-size: 38px;
+      }
+
+      .cta h2 {
+        font-size: 40px;
+      }
+
+      .cta {
+        padding: 50px 30px;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav>
+
+    <div class="container nav-wrapper">
+
+      <div class="logo">
+
+        <div class="logo-circle">
+          ♻
+        </div>
+
+        RE:BORN
+
+      </div>
+
+      <div class="menu">
+        <a href="#">Trang chủ</a>
+        <a href="#">Workshop</a>
+        <a href="#">Thu gom</a>
+        <a href="#">Shop</a>
+        <a href="#">Blog</a>
+        <a href="#">Liên hệ</a>
+      </div>
+
+    </div>
+
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="container">
+
+      <div class="hero-content">
+
+        <div class="hero-tag">
+          ECO • COFFEE • RECYCLING
+        </div>
+
+        <h1>
+          TÁI SINH<br>
+          NHỮNG ĐIỀU<br>
+          BỊ BỎ QUÊN
+        </h1>
+
+        <p>
+          RE:BORN COFFEE kết hợp không gian cà phê,
+          workshop tái chế và dịch vụ thu gom chai nhựa
+          để biến rác thải thành những sản phẩm có giá trị.
+        </p>
+
+        <div class="hero-buttons">
+
+          <button class="btn btn-primary">
+            ĐẶT WORKSHOP
+          </button>
+
+          <button class="btn btn-light">
+            THU GOM TẬN NƠI
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- HOW -->
+
+  <section>
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <span>HOW IT WORKS</span>
+
+        <h2>HÀNH TRÌNH TÁI SINH</h2>
+
+      </div>
+
+      <div class="steps">
+
+        <div class="step-card">
+
+          <div class="step-icon">
+            <i class="fa-solid fa-calendar"></i>
+          </div>
+
+          <h3>ĐẶT LỊCH</h3>
+
+          <p>
+            Đăng ký workshop hoặc yêu cầu thu gom trực tiếp trên website.
+          </p>
+
+        </div>
+
+        <div class="step-card">
+
+          <div class="step-icon">
+            <i class="fa-solid fa-truck"></i>
+          </div>
+
+          <h3>THU GOM</h3>
+
+          <p>
+            Shipper đến tận nơi nhận chai nhựa và vật liệu tái chế.
+          </p>
+
+        </div>
+
+        <div class="step-card">
+
+          <div class="step-icon">
+            <i class="fa-solid fa-recycle"></i>
+          </div>
+
+          <h3>TÁI CHẾ</h3>
+
+          <p>
+            Vật liệu được xử lý và sáng tạo thành sản phẩm mới.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- TRANSFORM -->
+
+  <section>
+
+    <div class="container transform">
+
+      <img
+        src="https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=2070&auto=format&fit=crop">
+
+      <div class="transform-content">
+
+        <h2>RÁC CỦA BẠN SẼ THÀNH GÌ?</h2>
+
+        <p>
+          Từ những chai nhựa cũ, chúng tôi tạo ra
+          các sản phẩm decor, nội thất mini và đồ handmade
+          mang phong cách bền vững hiện đại.
+        </p>
+
+        <div class="mini-grid">
+
+          <div class="mini-card">🪴 Chậu cây Eco</div>
+          <div class="mini-card">💡 Đèn decor</div>
+          <div class="mini-card">👜 Túi handmade</div>
+          <div class="mini-card">🪑 Nội thất mini</div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PRODUCTS -->
+
+  <section>
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <span>RECYCLED SHOP</span>
+
+        <h2>SẢN PHẨM TÁI CHẾ</h2>
+
+      </div>
+
+      <div class="products">
+
+        <div class="product-card">
+
+          <img
+            src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?q=80&w=1974&auto=format&fit=crop">
+
+          <div class="product-content">
+
+            <h3>Đèn Handmade</h3>
+
+            <p>
+              Được tái sinh từ chai nhựa và vật liệu cũ.
+            </p>
+
+            <div class="price">
+              250.000đ
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="product-card">
+
+          <img
+            src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1974&auto=format&fit=crop">
+
+          <div class="product-content">
+
+            <h3>Decor Eco</h3>
+
+            <p>
+              Thiết kế tối giản cho không gian xanh hiện đại.
+            </p>
+
+            <div class="price">
+              180.000đ
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+
+  <section>
+
+    <div class="container">
+
+      <div class="cta">
+
+        <h2>
+          THU GOM TẬN NƠI
+        </h2>
+
+        <p>
+          Đặt lịch ngay để shipper đến nhận chai/lọ
+          và cùng RE:BORN tạo nên giá trị mới cho môi trường.
+        </p>
+
+        <button class="btn btn-light">
+          GỌI SHIPPER
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="container footer-grid">
+
+      <div>
+
+        <h3>RE:BORN COFFEE</h3>
+
+        <p>
+          Không chỉ là cà phê,
+          đây là hành trình tái sinh những điều bị bỏ quên.
+        </p>
+
+      </div>
+
+      <div>
+
+        <h3>Liên hệ</h3>
+
+        <p>Email: reborncoffee@gmail.com</p>
+
+        <p>Hotline: 0123 456 789</p>
+
+      </div>
+
+      <div>
+
+        <h3>Follow Us</h3>
+
+        <p>Instagram / Facebook / TikTok</p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+
+</html>
